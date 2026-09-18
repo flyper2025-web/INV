@@ -1,0 +1,6 @@
+{
+  "name": "Evaluación Avanzada: Gestión de Inventarios",
+  "description": "Sistema interactivo de evaluación y certificación de competencias en Gestión de Inventarios con 100 preguntas especializadas, tabla de líderes global por puntuación y velocidad, retos entre amigos, reportes de evidencias e insignias académicas.",
+  "requestFramePermissions": ["notifications"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
