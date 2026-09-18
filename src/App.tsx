@@ -18,7 +18,6 @@ import { AnalyticsDashboard } from './components/AnalyticsDashboard';
 import { BadgesShowcase } from './components/BadgesShowcase';
 import { HistoryTab } from './components/HistoryTab';
 import { LeaderboardTab } from './components/LeaderboardTab';
-import { QuestionBankModal } from './components/QuestionBankModal';
 import { CloudSyncModal } from './components/CloudSyncModal';
 import { StudyReminderModal } from './components/StudyReminderModal';
 import { DownloadHtmlModal } from './components/DownloadHtmlModal';
@@ -36,7 +35,7 @@ export default function App() {
   });
 
   // Navigation tab
-  const [activeTab, setActiveTab] = useState<'evaluacion' | 'ranking' | 'estadisticas' | 'insignias' | 'historial' | 'banco'>('evaluacion');
+  const [activeTab, setActiveTab] = useState<'evaluacion' | 'ranking' | 'estadisticas' | 'insignias' | 'historial'>('evaluacion');
 
   // Currently completed evaluation attempt to show results screen
   const [activeAttemptResult, setActiveAttemptResult] = useState<EvaluationAttempt | null>(null);
@@ -205,10 +204,6 @@ export default function App() {
             onClearHistory={handleClearHistory}
             onTakeEvaluation={handleStartNewAttempt}
           />
-        )}
-
-        {activeTab === 'banco' && (
-          <QuestionBankModal />
         )}
       </main>
 

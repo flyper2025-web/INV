@@ -8,7 +8,6 @@ import {
   BarChart3, 
   Award, 
   FileText, 
-  BookOpen, 
   RotateCcw,
   CheckCircle2,
   Trophy,
@@ -19,8 +18,8 @@ import { ApprenticeState } from '../types';
 interface HeaderProps {
   darkMode: boolean;
   onToggleDarkMode: () => void;
-  activeTab: 'evaluacion' | 'ranking' | 'estadisticas' | 'insignias' | 'historial' | 'banco';
-  onSelectTab: (tab: 'evaluacion' | 'ranking' | 'estadisticas' | 'insignias' | 'historial' | 'banco') => void;
+  activeTab: 'evaluacion' | 'ranking' | 'estadisticas' | 'insignias' | 'historial';
+  onSelectTab: (tab: 'evaluacion' | 'ranking' | 'estadisticas' | 'insignias' | 'historial') => void;
   onOpenSync: () => void;
   onOpenReminder: () => void;
   onOpenDownloadHtml?: () => void;
@@ -209,19 +208,6 @@ export const Header: React.FC<HeaderProps> = ({
                 {apprenticeState.attempts.length}
               </span>
             )}
-          </button>
-
-          <button
-            id="tab-banco"
-            onClick={() => onSelectTab('banco')}
-            className={`px-3 py-2 rounded-lg flex items-center space-x-1.5 whitespace-nowrap transition-colors ${
-              activeTab === 'banco'
-                ? 'bg-indigo-600 text-white shadow-sm'
-                : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800'
-            }`}
-          >
-            <BookOpen className="w-4 h-4" />
-            <span>Banco de 100 Preguntas</span>
           </button>
         </nav>
       </div>
